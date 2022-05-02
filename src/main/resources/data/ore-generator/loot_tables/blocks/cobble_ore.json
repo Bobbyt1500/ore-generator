@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:raw_iron"
+          "name": "ore-generator:cobble_ore"
         }
       ],
       "conditions": [
