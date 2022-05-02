@@ -1,9 +1,13 @@
 package net.fabricmc.oregenerator;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -48,7 +52,7 @@ public class OreGeneratorMod implements ModInitializer {
 		// Registering Fluid
 		STILL_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "orefluid"), new OreFluid.Still());
 		FLOWING_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "flowing_orefluid"), new OreFluid.Flowing());
-		OREFLUID_BUCKET = Registry.register(Registry.ITEM, new Identifier("ore-generator", "acid_bucket"),
+		OREFLUID_BUCKET = Registry.register(Registry.ITEM, new Identifier("ore-generator", "orefluid_bucket"),
 				new BucketItem(STILL_OREFLUID, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
 		OREFLUID = Registry.register(Registry.BLOCK, new Identifier("ore-generator", "orefluid"),

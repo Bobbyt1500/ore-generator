@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.fabricmc.oregenerator.OreGeneratorMod"
+    ],
+    "client": [
+      "net.fabricmc.oregenerator.OreGeneratorModClient"
     ]
   },
 
