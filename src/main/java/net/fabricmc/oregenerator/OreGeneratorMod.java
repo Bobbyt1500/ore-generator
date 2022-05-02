@@ -37,7 +37,8 @@ public class OreGeneratorMod implements ModInitializer {
 	public static Block OREFLUID;
 
 	// Create Ore Blocks
-	public static final CobbleOre COBBLE_ORE = new CobbleOre(FabricBlockSettings.of(Material.STONE).hardness(4.0f));
+	public static final CobbleOre COBBLE_ORE = new CobbleOre(FabricBlockSettings.of(Material.STONE).hardness(1.5f).requiresTool());
+	public static final IronCobbleOre IRON_COBBLE_ORE = new IronCobbleOre(FabricBlockSettings.of(Material.STONE).hardness(1.5f).requiresTool());
 
 	@Override
 	public void onInitialize() {
@@ -55,9 +56,14 @@ public class OreGeneratorMod implements ModInitializer {
 				new FluidBlock(STILL_OREFLUID, FabricBlockSettings.copy(Blocks.WATER)){});
 
 
-		// Registering Block
+		// Registering Blocks
 		Registry.register(Registry.BLOCK, new Identifier("ore-generator", "cobble_ore"), COBBLE_ORE);
 		Registry.register(Registry.ITEM, new Identifier("ore-generator", "cobble_ore"),
 				new BlockItem(COBBLE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+
+		Registry.register(Registry.BLOCK, new Identifier("ore-generator", "iron_cobble_ore"), IRON_COBBLE_ORE);
+		Registry.register(Registry.ITEM, new Identifier("ore-generator", "iron_cobble_ore"),
+				new BlockItem(IRON_COBBLE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+
 	}
 }

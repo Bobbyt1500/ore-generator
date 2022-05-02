@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "ore-generator:block/iron_cobble_ore" }
+  }
+}
