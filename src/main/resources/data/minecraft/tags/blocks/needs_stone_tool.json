@@ -1,0 +1,7 @@
+{
+  "replace": true,
+  "values": [
+    "ore-generator:cobble_ore",
+    "ore-generator:iron_cobble_ore"
+  ]
+}
