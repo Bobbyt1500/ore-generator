@@ -9,6 +9,7 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
+import net.minecraft.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
@@ -104,6 +105,11 @@ public abstract class OreFluid extends FlowableFluid {
     @Override
     protected BlockState toBlockState(FluidState fluidState) {
         return OreGeneratorMod.OREFLUID.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(fluidState));
+    }
+
+    @Override
+    protected void flow(WorldAccess world, BlockPos pos, BlockState state, Direction direction, FluidState fluidState) {
+        super.flow(world, pos, state, direction, fluidState);
     }
 
     public static class Flowing extends OreFluid {
