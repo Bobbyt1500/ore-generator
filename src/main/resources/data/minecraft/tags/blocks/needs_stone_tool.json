@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "ore-generator:cobble_ore",
-    "ore-generator:iron_cobble_ore"
+    "ore-generator:iron_cobble_ore",
+    "ore-generator:gold_cobble_ore",
+    "ore-generator:diamond_cobble_ore"
   ]
 }
