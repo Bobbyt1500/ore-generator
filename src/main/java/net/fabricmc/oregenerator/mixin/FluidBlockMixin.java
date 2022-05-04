@@ -31,7 +31,7 @@ public abstract class FluidBlockMixin extends Block implements FluidDrainable {
         this.fluid = fluid;
     }
 
-    @Inject(method = "receiveNeighborFluids", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "receiveNeighborFluids", at = @At("RETURN"), cancellable = true)
     public void onUpdate(World world, BlockPos pos, BlockState state, CallbackInfoReturnable<Boolean> ci){
         if (this.fluid.isIn(FluidTags.LAVA)) {
 
