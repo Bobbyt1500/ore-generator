@@ -1,9 +1,16 @@
-# Fabric Example Mod
+# Ore Generator
 
-## Setup
+## Requirements
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Fabric Loader<br>
+Fabric API
 
-## License
+## Recipes
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+#### Available for Gold, Diamond, and Iron using the following pattern:
+![Recipe](images/recipe.png)
+
+## Generator
+
+#### You can make a generator like this:
+![Example](images/example.png)
