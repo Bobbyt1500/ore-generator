@@ -1,6 +1,7 @@
 package net.fabricmc.oregenerator;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.oregenerator.oreblock.CobbleOre;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
