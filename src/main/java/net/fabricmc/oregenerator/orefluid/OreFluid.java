@@ -1,6 +1,7 @@
 package net.fabricmc.oregenerator.orefluid;
 
 import net.fabricmc.oregenerator.CobbleOre;
+import net.fabricmc.oregenerator.OreGeneratorAdditions;
 import net.fabricmc.oregenerator.OreGeneratorMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -20,7 +21,7 @@ import net.minecraft.world.WorldView;
 public abstract class OreFluid extends FlowableFluid {
 
     public Block getGenerationBlock() {
-        return OreGeneratorMod.COBBLE_ORE;
+        return OreGeneratorAdditions.COBBLE_ORE;
     }
 
     /**
