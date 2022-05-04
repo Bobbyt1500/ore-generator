@@ -1,15 +1,14 @@
-package net.fabricmc.oregenerator;
+package net.fabricmc.oregenerator.oreblock;
 
-import net.minecraft.block.Block;
+import net.fabricmc.oregenerator.oreblock.CobbleOre;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class CobbleOre extends Block
+public class IronCobbleOre extends CobbleOre
 {
-    public CobbleOre(Settings settings)
+    public IronCobbleOre(Settings settings)
     {
         super(settings);
     }

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "ore-generator:block/gold_cobble_ore" }
+  }
+}
