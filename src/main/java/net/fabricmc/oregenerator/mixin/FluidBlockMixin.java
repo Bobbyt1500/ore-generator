@@ -49,6 +49,7 @@ public abstract class FluidBlockMixin extends Block implements FluidDrainable {
                 // If this lava collides with an orefluids fluids, place block
                 if (blockState.getFluidState().isIn(OreGeneratorAdditions.ORE_FLUIDS)) {
                     OreFluid oreFluid = (OreFluid) blockState.getFluidState().getFluid();
+                    OreGeneratorMod.LOGGER.info(oreFluid.getGenerationBlock().toString());
                     world.setBlockState(pos, oreFluid.getGenerationBlock().getDefaultState());
 
                 }

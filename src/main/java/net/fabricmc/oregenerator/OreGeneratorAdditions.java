@@ -5,6 +5,8 @@ import net.fabricmc.oregenerator.oreblock.CobbleOre;
 import net.fabricmc.oregenerator.oreblock.DiamondCobbleOre;
 import net.fabricmc.oregenerator.oreblock.GoldCobbleOre;
 import net.fabricmc.oregenerator.oreblock.IronCobbleOre;
+import net.fabricmc.oregenerator.orefluid.DiamondOreFluid;
+import net.fabricmc.oregenerator.orefluid.GoldOreFluid;
 import net.fabricmc.oregenerator.orefluid.IronOreFluid;
 import net.fabricmc.oregenerator.orefluid.OreFluid;
 import net.minecraft.block.Block;
@@ -28,6 +30,15 @@ public class OreGeneratorAdditions {
     public static FlowableFluid FLOWING_IRON_OREFLUID;
     public static Item IRON_OREFLUID_BUCKET;
     public static Block IRON_OREFLUID;
+
+    public static FlowableFluid STILL_GOLD_OREFLUID;
+    public static FlowableFluid FLOWING_GOLD_OREFLUID;
+    public static Item GOLD_OREFLUID_BUCKET;
+    public static Block GOLD_OREFLUID;
+    public static FlowableFluid STILL_DIAMOND_OREFLUID;
+    public static FlowableFluid FLOWING_DIAMOND_OREFLUID;
+    public static Item DIAMOND_OREFLUID_BUCKET;
+    public static Block DIAMOND_OREFLUID;
 
     public static final TagKey<Fluid> ORE_FLUIDS = TagKey.of(Registry.FLUID_KEY, new Identifier("ore-generator", "ore_fluids"));
 
@@ -53,6 +64,23 @@ public class OreGeneratorAdditions {
 
         IRON_OREFLUID = Registry.register(Registry.BLOCK, new Identifier("ore-generator", "iron_orefluid"),
                 new FluidBlock(STILL_IRON_OREFLUID, FabricBlockSettings.copy(Blocks.WATER)){});
+
+        // Gold Ore Fluid
+        STILL_GOLD_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "gold_orefluid"), new GoldOreFluid.Still());
+        FLOWING_GOLD_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "flowing_gold_orefluid"), new GoldOreFluid.Flowing());
+        GOLD_OREFLUID_BUCKET = Registry.register(Registry.ITEM, new Identifier("ore-generator", "gold_orefluid_bucket"),
+                new BucketItem(STILL_GOLD_OREFLUID, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+        GOLD_OREFLUID = Registry.register(Registry.BLOCK, new Identifier("ore-generator", "gold_orefluid"),
+                new FluidBlock(STILL_GOLD_OREFLUID, FabricBlockSettings.copy(Blocks.WATER)){});
+
+        // Diamond Ore Fluid
+        STILL_DIAMOND_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "diamond_orefluid"), new DiamondOreFluid.Still());
+        FLOWING_DIAMOND_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "flowing_diamond_orefluid"), new DiamondOreFluid.Flowing());
+        DIAMOND_OREFLUID_BUCKET = Registry.register(Registry.ITEM, new Identifier("ore-generator", "diamond_orefluid_bucket"),
+                new BucketItem(STILL_DIAMOND_OREFLUID, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+
+        DIAMOND_OREFLUID = Registry.register(Registry.BLOCK, new Identifier("ore-generator", "diamond_orefluid"),
+                new FluidBlock(STILL_DIAMOND_OREFLUID, FabricBlockSettings.copy(Blocks.WATER)){});
     }
 
     public static void initiliazeBlocks() {

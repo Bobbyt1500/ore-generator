@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WRW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:iron_block"
+    },
+    "R": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "result": {
+    "item": "ore-generator:orefluid_bucket",
+    "count": 1
+  }
+}
