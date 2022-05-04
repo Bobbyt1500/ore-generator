@@ -48,10 +48,14 @@ public class OreGeneratorAdditions {
     public static final DiamondCobbleOre DIAMOND_COBBLE_ORE = new DiamondCobbleOre(FabricBlockSettings.of(Material.STONE).hardness(1.5f).requiresTool());
 
     public static void initiliazeFluids() {
+        Item.Settings bucketSettings = new Item.Settings();
+        bucketSettings.group(OreGeneratorMod.ITEM_GROUP);
+        bucketSettings.recipeRemainder(Items.BUCKET).maxCount(1);
+
         STILL_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "orefluid"), new OreFluid.Still());
         FLOWING_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "flowing_orefluid"), new OreFluid.Flowing());
         OREFLUID_BUCKET = Registry.register(Registry.ITEM, new Identifier("ore-generator", "orefluid_bucket"),
-                new BucketItem(STILL_OREFLUID, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+                new BucketItem(STILL_OREFLUID, bucketSettings));
 
         OREFLUID = Registry.register(Registry.BLOCK, new Identifier("ore-generator", "orefluid"),
                 new FluidBlock(STILL_OREFLUID, FabricBlockSettings.copy(Blocks.WATER)){});
@@ -60,7 +64,7 @@ public class OreGeneratorAdditions {
         STILL_IRON_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "iron_orefluid"), new IronOreFluid.Still());
         FLOWING_IRON_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "flowing_iron_orefluid"), new IronOreFluid.Flowing());
         IRON_OREFLUID_BUCKET = Registry.register(Registry.ITEM, new Identifier("ore-generator", "iron_orefluid_bucket"),
-                new BucketItem(STILL_IRON_OREFLUID, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+                new BucketItem(STILL_IRON_OREFLUID, bucketSettings));
 
         IRON_OREFLUID = Registry.register(Registry.BLOCK, new Identifier("ore-generator", "iron_orefluid"),
                 new FluidBlock(STILL_IRON_OREFLUID, FabricBlockSettings.copy(Blocks.WATER)){});
@@ -69,7 +73,7 @@ public class OreGeneratorAdditions {
         STILL_GOLD_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "gold_orefluid"), new GoldOreFluid.Still());
         FLOWING_GOLD_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "flowing_gold_orefluid"), new GoldOreFluid.Flowing());
         GOLD_OREFLUID_BUCKET = Registry.register(Registry.ITEM, new Identifier("ore-generator", "gold_orefluid_bucket"),
-                new BucketItem(STILL_GOLD_OREFLUID, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+                new BucketItem(STILL_GOLD_OREFLUID, bucketSettings));
         GOLD_OREFLUID = Registry.register(Registry.BLOCK, new Identifier("ore-generator", "gold_orefluid"),
                 new FluidBlock(STILL_GOLD_OREFLUID, FabricBlockSettings.copy(Blocks.WATER)){});
 
@@ -77,7 +81,7 @@ public class OreGeneratorAdditions {
         STILL_DIAMOND_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "diamond_orefluid"), new DiamondOreFluid.Still());
         FLOWING_DIAMOND_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "flowing_diamond_orefluid"), new DiamondOreFluid.Flowing());
         DIAMOND_OREFLUID_BUCKET = Registry.register(Registry.ITEM, new Identifier("ore-generator", "diamond_orefluid_bucket"),
-                new BucketItem(STILL_DIAMOND_OREFLUID, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+                new BucketItem(STILL_DIAMOND_OREFLUID, bucketSettings));
 
         DIAMOND_OREFLUID = Registry.register(Registry.BLOCK, new Identifier("ore-generator", "diamond_orefluid"),
                 new FluidBlock(STILL_DIAMOND_OREFLUID, FabricBlockSettings.copy(Blocks.WATER)){});
@@ -86,18 +90,18 @@ public class OreGeneratorAdditions {
     public static void initiliazeBlocks() {
         Registry.register(Registry.BLOCK, new Identifier("ore-generator", "cobble_ore"), COBBLE_ORE);
         Registry.register(Registry.ITEM, new Identifier("ore-generator", "cobble_ore"),
-                new BlockItem(COBBLE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+                new BlockItem(COBBLE_ORE, new Item.Settings().group(OreGeneratorMod.ITEM_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier("ore-generator", "iron_cobble_ore"), IRON_COBBLE_ORE);
         Registry.register(Registry.ITEM, new Identifier("ore-generator", "iron_cobble_ore"),
-                new BlockItem(IRON_COBBLE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+                new BlockItem(IRON_COBBLE_ORE, new Item.Settings().group(OreGeneratorMod.ITEM_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier("ore-generator", "gold_cobble_ore"), GOLD_COBBLE_ORE);
         Registry.register(Registry.ITEM, new Identifier("ore-generator", "gold_cobble_ore"),
-                new BlockItem(GOLD_COBBLE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+                new BlockItem(GOLD_COBBLE_ORE, new Item.Settings().group(OreGeneratorMod.ITEM_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier("ore-generator", "diamond_cobble_ore"), DIAMOND_COBBLE_ORE);
         Registry.register(Registry.ITEM, new Identifier("ore-generator", "diamond_cobble_ore"),
-                new BlockItem(DIAMOND_COBBLE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+                new BlockItem(DIAMOND_COBBLE_ORE, new Item.Settings().group(OreGeneratorMod.ITEM_GROUP)));
     }
 }
