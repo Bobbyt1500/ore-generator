@@ -19,6 +19,8 @@ import net.minecraft.world.WorldView;
 
 public abstract class OreFluid extends FlowableFluid {
 
+    public static int tintColor = 0;
+
     public Block getGenerationBlock() {
         return OreGeneratorAdditions.COBBLE_ORE;
     }
@@ -95,22 +97,22 @@ public abstract class OreFluid extends FlowableFluid {
 
     @Override
     public Fluid getStill() {
-        return OreGeneratorMod.STILL_OREFLUID;
+        return OreGeneratorAdditions.STILL_OREFLUID;
     }
 
     @Override
     public Fluid getFlowing() {
-        return OreGeneratorMod.FLOWING_OREFLUID;
+        return OreGeneratorAdditions.FLOWING_OREFLUID;
     }
 
     @Override
     public Item getBucketItem() {
-        return OreGeneratorMod.OREFLUID_BUCKET;
+        return OreGeneratorAdditions.OREFLUID_BUCKET;
     }
 
     @Override
     protected BlockState toBlockState(FluidState fluidState) {
-        return OreGeneratorMod.OREFLUID.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(fluidState));
+        return OreGeneratorAdditions.OREFLUID.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(fluidState));
     }
 
     @Override
