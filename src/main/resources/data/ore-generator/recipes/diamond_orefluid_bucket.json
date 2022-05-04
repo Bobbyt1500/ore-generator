@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:iron_block"
+      "item": "minecraft:diamond_block"
     },
     "B": {
-      "item": "minecraft:bucket"
+      "item": "minecraft:water_bucket"
     }
   },
   "result": {
-    "item": "ore-generator:orefluid_bucket",
+    "item": "ore-generator:diamond_orefluid_bucket",
     "count": 1
   }
 }
