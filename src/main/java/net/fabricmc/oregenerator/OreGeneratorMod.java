@@ -41,7 +41,7 @@ public class OreGeneratorMod implements ModInitializer {
 	public static final TagKey<Fluid> ORE_FLUIDS = TagKey.of(Registry.FLUID_KEY, new Identifier("ore-generator", "ore_fluids"));
 
 	// Create Ore Blocks
-	public static final CobbleOre COBBLE_ORE = new CobbleOre(FabricBlockSettings.of(Material.STONE).hardness(1.5f).requiresTool());
+
 	public static final IronCobbleOre IRON_COBBLE_ORE = new IronCobbleOre(FabricBlockSettings.of(Material.STONE).hardness(1.5f).requiresTool());
 
 	@Override
@@ -49,6 +49,8 @@ public class OreGeneratorMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+		OreGeneratorAdditions.initiliaze();
 
 		// Registering Fluid
 		STILL_OREFLUID = Registry.register(Registry.FLUID, new Identifier("ore-generator", "orefluid"), new OreFluid.Still());
@@ -70,9 +72,6 @@ public class OreGeneratorMod implements ModInitializer {
 
 
 		// Registering Blocks
-		Registry.register(Registry.BLOCK, new Identifier("ore-generator", "cobble_ore"), COBBLE_ORE);
-		Registry.register(Registry.ITEM, new Identifier("ore-generator", "cobble_ore"),
-				new BlockItem(COBBLE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
 		Registry.register(Registry.BLOCK, new Identifier("ore-generator", "iron_cobble_ore"), IRON_COBBLE_ORE);
 		Registry.register(Registry.ITEM, new Identifier("ore-generator", "iron_cobble_ore"),
