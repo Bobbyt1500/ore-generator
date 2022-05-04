@@ -19,8 +19,6 @@ import net.minecraft.world.WorldView;
 
 public abstract class OreFluid extends FlowableFluid {
 
-    public static int tintColor = 0;
-
     public Block getGenerationBlock() {
         return OreGeneratorAdditions.COBBLE_ORE;
     }

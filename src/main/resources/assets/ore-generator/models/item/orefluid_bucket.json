@@ -1,3 +1,6 @@
 {
-  "parent": "ore-generator:item/orefluid_bucket"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ore-generator:item/orefluid_bucket"
+  }
 }
