@@ -1,6 +1,5 @@
 package net.fabricmc.oregenerator.orefluid;
 
-import net.fabricmc.oregenerator.CobbleOre;
 import net.fabricmc.oregenerator.OreGeneratorAdditions;
 import net.fabricmc.oregenerator.OreGeneratorMod;
 import net.minecraft.block.Block;

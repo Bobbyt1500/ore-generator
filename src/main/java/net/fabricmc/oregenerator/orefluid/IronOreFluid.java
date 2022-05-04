@@ -1,5 +1,6 @@
 package net.fabricmc.oregenerator.orefluid;
 
+import net.fabricmc.oregenerator.OreGeneratorAdditions;
 import net.fabricmc.oregenerator.OreGeneratorMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -11,7 +12,7 @@ import net.minecraft.state.property.Properties;
 public class IronOreFluid extends OreFluid{
     @Override
     public Block getGenerationBlock() {
-        return OreGeneratorMod.IRON_COBBLE_ORE;
+        return OreGeneratorAdditions.IRON_COBBLE_ORE;
     }
 
     @Override
