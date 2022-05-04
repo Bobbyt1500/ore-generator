@@ -4,13 +4,14 @@
   "version": "${version}",
 
   "name": "Ore Generator",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Allows the creation of Ore Generations using the corresponding Ore Fluid",
   "authors": [
-    "Me!"
+    "Bobby15",
+    "Ovenjohnson",
+    "Chance"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Bobbyt1500/ore-generator"
   },
 
   "license": "CC0-1.0",
@@ -33,8 +34,5 @@
     "fabric": "*",
     "minecraft": "~1.18.2",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
