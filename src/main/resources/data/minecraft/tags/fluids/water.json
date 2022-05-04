@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values":
+  [
+    "ore-generator:orefluid",
+    "ore-generator:flowing_orefluid",
+    "ore-generator:iron_orefluid",
+    "ore-generator:flowing_iron_orefluid",
+    "ore-generator:gold_orefluid",
+    "ore-generator:flowing_gold_orefluid",
+    "ore-generator:diamond_orefluid",
+    "ore-generator:flowing_diamond_orefluid"
+  ]
+}
