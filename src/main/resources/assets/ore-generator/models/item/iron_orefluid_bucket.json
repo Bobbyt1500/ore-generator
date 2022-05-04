@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ore-generator:item/iron_orefluid_bucket"
+  }
+}
