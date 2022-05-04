@@ -2,7 +2,9 @@ package net.fabricmc.oregenerator.mixin;
 
 import com.google.common.collect.UnmodifiableIterator;
 import net.fabricmc.oregenerator.OreGeneratorMod;
+import net.fabricmc.oregenerator.orefluid.OreFluid;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.block.FluidDrainable;
@@ -45,7 +47,8 @@ public abstract class FluidBlockMixin extends Block implements FluidDrainable {
 
                 // If this lava collides with an orefluids fluids, place block
                 if (blockState.getFluidState().isIn(OreGeneratorMod.ORE_FLUIDS)) {
-                    world.setBlockState(pos, OreGeneratorMod.IRON_COBBLE_ORE.getDefaultState());
+                    OreFluid oreFluid = (OreFluid) blockState.getFluidState().getFluid();
+                    world.setBlockState(pos, oreFluid.getGenerationBlock().getDefaultState());
 
                 }
 
