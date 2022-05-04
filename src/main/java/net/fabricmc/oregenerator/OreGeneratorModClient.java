@@ -15,9 +15,17 @@ public class OreGeneratorModClient implements ClientModInitializer {
         FluidRenderHandlerRegistry.INSTANCE.register(OreGeneratorMod.STILL_OREFLUID, OreGeneratorMod.FLOWING_OREFLUID, new SimpleFluidRenderHandler(
                 new Identifier("minecraft:block/water_still"),
                 new Identifier("minecraft:block/water_flow"),
-                0xd3e8ed
+                0
+        ));
+
+        // Render Fluid Renderer
+        FluidRenderHandlerRegistry.INSTANCE.register(OreGeneratorMod.STILL_IRON_OREFLUID, OreGeneratorMod.FLOWING_IRON_OREFLUID, new SimpleFluidRenderHandler(
+                new Identifier("minecraft:block/water_still"),
+                new Identifier("minecraft:block/water_flow"),
+                0x838c91
         ));
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), OreGeneratorMod.STILL_OREFLUID, OreGeneratorMod.FLOWING_OREFLUID);
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), OreGeneratorMod.STILL_IRON_OREFLUID, OreGeneratorMod.FLOWING_IRON_OREFLUID);
     }
 }
