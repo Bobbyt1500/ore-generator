@@ -27,7 +27,28 @@ public class OreGeneratorModClient implements ClientModInitializer {
                 0xd7edfc
         ));
 
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), OreGeneratorAdditions.STILL_OREFLUID, OreGeneratorAdditions.FLOWING_OREFLUID, OreGeneratorAdditions.STILL_IRON_OREFLUID, OreGeneratorAdditions.FLOWING_IRON_OREFLUID);
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), OreGeneratorAdditions.STILL_IRON_OREFLUID, OreGeneratorAdditions.FLOWING_IRON_OREFLUID);
+        // Render Fluid Renderer
+        FluidRenderHandlerRegistry.INSTANCE.register(OreGeneratorAdditions.STILL_GOLD_OREFLUID, OreGeneratorAdditions.FLOWING_GOLD_OREFLUID, new SimpleFluidRenderHandler(
+                new Identifier("minecraft:block/water_still"),
+                new Identifier("minecraft:block/water_flow"),
+                0xfff36e
+        ));
+
+        // Render Fluid Renderer
+        FluidRenderHandlerRegistry.INSTANCE.register(OreGeneratorAdditions.STILL_DIAMOND_OREFLUID, OreGeneratorAdditions.FLOWING_DIAMOND_OREFLUID, new SimpleFluidRenderHandler(
+                new Identifier("minecraft:block/water_still"),
+                new Identifier("minecraft:block/water_flow"),
+                0x57d8ff
+        ));
+
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), OreGeneratorAdditions.STILL_OREFLUID,
+                OreGeneratorAdditions.FLOWING_OREFLUID,
+                OreGeneratorAdditions.STILL_IRON_OREFLUID,
+                OreGeneratorAdditions.FLOWING_IRON_OREFLUID,
+                OreGeneratorAdditions.STILL_GOLD_OREFLUID,
+                OreGeneratorAdditions.FLOWING_GOLD_OREFLUID,
+                OreGeneratorAdditions.STILL_DIAMOND_OREFLUID,
+                OreGeneratorAdditions.FLOWING_DIAMOND_OREFLUID
+                );
     }
 }
