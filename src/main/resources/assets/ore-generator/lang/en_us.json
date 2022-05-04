@@ -1,0 +1,13 @@
+{
+  "block.ore-generator.cobble_ore": "Cobblestone Ore",
+  "block.ore-generator.iron_cobble_ore": "Iron Cobblestone Ore",
+  "block.ore-generator.gold_cobble_ore": "Gold Cobblestone Ore",
+  "block.ore-generator.diamond_cobble_ore": "Diamond Cobblestone Ore",
+
+  "item.ore-generator.orefluid_bucket": "Orefluid",
+  "item.ore-generator.iron_orefluid_bucket": "Iron Orefluid",
+  "item.ore-generator.gold_orefluid_bucket": "Gold Orefluid",
+  "item.ore-generator.diamond_orefluid_bucket": "Diamond Orefluid",
+
+  "itemGroup.ore-generator.general": "Orefluid"
+}
